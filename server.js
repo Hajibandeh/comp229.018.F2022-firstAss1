@@ -23,38 +23,50 @@
 
 
 //connect1
-const connect = require('connect');
+// const connect = require('connect');
 
-const app = connect();
+// const app = connect();
 
-app.listen(3000);
+// app.listen(3000);
 
 
-console.log('Server running at http://localhost:3000/');
+// console.log('Server running at http://localhost:3000/');
 
-function helloWorld(req, res, next) {
+// function helloWorld(req, res, next) {
 
-   res.setHeader('Content-Type', 'text/plain');
+//    res.setHeader('Content-Type', 'text/plain');
 
-   res.end('Hello World');
+//    res.end('Hello World');
 
-};
-function logger (req,res,next){
-   console.log(req.method,req.url);
-   next()
-}
-function goodbyeWorld(req, res, next) {
+// };
+// function logger (req,res,next){
+//    console.log(req.method,req.url);
+//    next()
+// }
+// function goodbyeWorld(req, res, next) {
 
-   res.setHeader('Content-Type', 'text/plain');
+//    res.setHeader('Content-Type', 'text/plain');
 
-   res.end('goodbye World');
+//    res.end('goodbye World');
 
-};
+// };
 
-app.use(logger);
-app.use('/MyPage',helloWorld);
-app.use('/goodbye',goodbyeWorld);
-app.use(helloWorld);
+// app.use(logger);
+// app.use('/MyPage',helloWorld);
+// app.use('/goodbye',goodbyeWorld);
+// app.use(helloWorld);
 
-console.log('Server running at http://localhost:3000/');
+// console.log('Server running at http://localhost:3000/');
+
+const express = require('express')
+const app = express()
+const port = 3000
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`)
+})
 

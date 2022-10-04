@@ -1,0 +1,86 @@
+<% include partials/header.ejs %>
+    <body class="container-fluid">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/index">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">About Me</li>
+          </ol>
+        </nav>
+        
+            <div id="Body" class="row" >
+                <% include partials/Sidebar.ejs %>
+      
+            <div id="Content" class="col-md-10">
+              
+              <% if (title == "Aboutme") { %>
+                <div>
+                  <div class="container">
+                    <p> My name is Behnaz Hajibandeh, I am from Iran. I am software developer and I have experience in Databases and Software. I completed my master education in electronic engineering,. However, I work as software engineering. I work on financial application which include of accounting software, warehouse, ERP. I have experience in SQL and visual basic. My personal interesting is learning new thing and getting socialized. I ready to take my career to the next level and looking for new opportunity. 
+                    </p>
+                   <div class="alert alert-success">
+                                       <strong>My Education!</strong> I completed my master education in electronic engineering.
+                  </div>
+                  
+                   <table  class="table table-striped">
+                      <tr>
+                        <th>Year</th>
+                        <th>Grade</th>
+                        <th>Major</th>
+                      </tr>
+                      <tr>
+                        <td>2009-2012</td>
+                        <td>Master</td>
+                        <td>Electronic Engineering</td>
+                      </tr>
+                      <tr>
+                        <td>2005-2009</td>
+                        <td>Bachelore</td>
+                        <td>Electronic Engineering</td>
+                      </tr>
+                    </table> 
+                  </div>
+                 
+                 
+                </div>
+
+                <div class="container">
+                 <div class="alert alert-success">
+                    <strong>My Skills!</strong> I have experience in SQL,Crystal Report and visual basic.
+                  </div>
+                    <table  class="table table-striped">
+                     <tr>
+                       <th>Year</th>
+                       <th>Skill</th>
+                                          </tr>
+                     <tr>
+                       <td>7 Years</td>
+                       <td>Visual Basic.Net</td>
+                     
+                     </tr>
+                     <tr>
+                       <td>3 Years</td>
+                       <td>SQL (MySQL, Posture SQL, NoSQL)</td>
+                      
+                     </tr>
+                     <tr>
+                      <td>2 Years</td>
+                      <td>Crystal Reports Developer</td>
+                     
+                    </tr>
+                   </table> 
+                   <button type="button" class="btn btn-success btn-lg " href="./images/res.pdf">Download My resume</button>
+                 </div>
+                 
+                 </div>
+                
+              <% } else { %>
+                <div>
+                  <p>Services Page</p>
+                </div>
+              <% } %>   
+            </div>
+        </div>
+        <hr>
+        <div id="Footer" class="row bg-primary text-white bg-opacity-50" >
+            <% include partials/Footer.ejs %>
+  

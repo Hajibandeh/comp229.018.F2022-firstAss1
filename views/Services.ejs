@@ -1,0 +1,81 @@
+<% include partials/header.ejs %>
+<body class="container-fluid">
+
+
+        <div id="Body" class="row" >
+          <% include partials/Sidebar.ejs %>
+
+      <div id="Content" class="col-md-10">
+        
+        <% if (title == "Services") { %>
+         
+          <div>
+            <div class="alert alert-success">
+              <strong>My Services!</strong> This page is a short list of services my offer...
+            </div>
+                        <div class="panel-group" id="accordion">
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                      VB.NET Windows Application </a>
+                  </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse in">
+                  <div class="panel-body">Windows Forms is a Graphical User Interface(GUI) class library which is bundled in . Net Framework. Its main purpose is to provide an easier interface to develop the applications for desktop, tablet, PCs. It is also termed as the WinForms
+                    </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                      Microsft SQL Server</a>
+                  </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                  <div class="panel-body">Microsoft SQL Server is a relational database management system (RDBMS) that supports a wide variety of transaction processing, business intelligence and analytics applications in corporate IT environments.
+                    </div>
+                </div>
+              </div>
+              <div class="panel panel-default">
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                      Crystal Report</a>
+                  </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                  <div class="panel-body">
+                    Crystal Reports is a popular Windows-based report writer solution that allows a developer to create reports and dashboards from a variety of data sources with a minimum of code to write. Crystal Reports is owned and developed by SAP.
+                    </div>
+                </div>
+              </div>
+              <div  class="row">
+                <div  class="col-sm-4">
+                  <p><strong>Crystal Report</strong></p><br>
+                  <img class="img-circle person" style="width:40%;" src="./images/77.PNG" alt="Random Name">
+                </div>
+                <div  class="col-sm-4">
+                  <p><strong>Visual Basic</strong></p><br>
+                  <img class="img-circle person" style="width:35%;" src="./images/66.PNG" alt="Random Name">
+                </div>
+                <div class="col-sm-4">
+                  <p><strong>Sql Databases</strong></p><br>
+                  <img class="img-circle person" style="width:40%;" src="./images/55.PNG" alt="Random Name">
+                </div>
+              </div>
+            </div>
+         </div>
+         
+          <% } else { %>
+            <div>
+              <p>AboutMe Page</p>
+            </div>
+          <% } %>   
+        </div>
+    </div>
+    <hr>
+    <div id="Footer" class="row bg-primary text-white bg-opacity-50" >
+        <% include partials/Footer.ejs %>
+        

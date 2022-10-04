@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Behnaz HajiBandeh Portfolio</title>
+    <style>
+      /* #Header{
+        height:5vh;
+        background-color: whitesmoke;
+      } */
+      #Sidebar{
+        height:80vh;
+        background-color: whitesmoke;
+        padding: 5px;
+      }
+      #Content{
+        height:80vh;
+        background-color: lightgrey;
+        padding: 5px;
+      }
+      #Footer{
+        height:7vh;
+        background-color: silver;
+      }
+    </style>
+        <title>Behnaz HajiBandeh Portfolio</title>
+          <nav class="navbar navbar-expand-lg bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#"><img src="./images/Behnaz-logo.jpeg" alt="Bootstrap" width="60" height="48"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    
+
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <% if (title == "Home") { %>
+                        <a class="nav-link active" href="/">
+                    <% } else { %>
+                        <a class="nav-link" href="/">
+                    <% } %>            
+                        <i class="fas fa-home"></i> Home </a>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <% if (title == "Projects") { %>
+                        <a class="nav-link active" href="/Projects">
+                    <% } else { %>
+                        <a class="nav-link" href="/Projects">
+                    <% } %>            
+                        <i class="fas fa-home"></i> Projects </a>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <% if (title == "Aboutme") { %>
+                        <a class="nav-link active" href="/Aboutme">
+                    <% } else { %>
+                        <a class="nav-link" href="/Aboutme">
+                    <% } %>            
+                        <i class="fas fa-home"></i> About me </a>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <% if (title == "Services") { %>
+                        <a class="nav-link active" href="/Services">
+                    <% } else { %>
+                        <a class="nav-link" href="/Services">
+                    <% } %>            
+                        <i class="fas fa-user"></i> Services </a>
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <% if (title == "ContactMe") { %>
+                        <a class="nav-link active" href="/ContactMe">
+                    <% } else { %>
+                        <a class="nav-link" href="/ContactMe">
+                    <% } %>            
+                        <i class="fas fa-user"></i> ContactMe </a>
+                    </a>
+                  </li>
+                  
+                </ul>
+
+
+
+
+
+
+
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </head>

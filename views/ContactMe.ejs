@@ -1,0 +1,78 @@
+<% include partials/header.ejs %>
+    <body class="container-fluid">
+      <div id="Body" class="row" >
+       
+      <% if (title == "ContactMe") { %>
+
+                          <div id="Content" class="col-md-12">
+                            <div id="contact" class="container">
+                                    <div class="container">
+                <h2 class="text-center text-uppercase text-secondary mb-0">
+                  Contact Me
+                </h2>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <p><span class="glyphicon glyphicon-map-marker"></span>Ontario, Canada</p>
+                    <p><span class="glyphicon glyphicon-phone"></span>Phone: +16476242780</p>
+                    <p><span class="glyphicon glyphicon-envelope"></span>Email: Behnaz.hajibandeh@gmail.com</p>
+                  </div>
+                  <div class="col-md-8">
+                    <div class="row">
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
+                      </div>
+                      <div class="col-sm-6 form-group">
+                        <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+                      </div>
+                    </div>
+                    <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
+                    <br>
+                  
+                  </div>
+                </div>
+
+                      <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Your Relation
+                        <span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Friend</a></li>
+                          <li><a href="#">Family</a></li>
+                          <li><a href="#">Classmate</a></li>
+                        </ul>
+                        <br />
+                        <br />
+                      </div>
+                      <div class="form-group">
+                        <button type="submit" class="btn btn-primary" btn-xl btn-block>
+                          Send
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                </hr>
+              </div>
+            </div>
+          
+        
+          
+           
+
+
+  
+           
+              
+          
+              <!--Footer-->
+             
+              <% } else { %>
+                <div>
+                  <p>AboutMe Page</p>
+                </div>
+              <% } %>   
+            
+        </div>
+        <hr>
+        <div id="Footer" class="row bg-primary text-white bg-opacity-50" >
+            <% include partials/Footer.ejs %>

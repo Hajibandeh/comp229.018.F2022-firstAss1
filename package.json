@@ -1,7 +1,7 @@
 {
   "scripts": {
     "start": "node ./bin/www",
-    "test":"eco\"ERROR:no test\"&& exit1"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -11,16 +11,14 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1"
   },
-
   "name": "comp229.018.f2022",
   "description": "COMP229 Code Examples",
   "version": "1.0.0",
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Hajibandeh/comp229.018.F2022-firstAss1.git"
   },
-  "author": "",
+  "author": "Behnaz Hajibandeh",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Hajibandeh/comp229.018.F2022-firstAss1/issues"

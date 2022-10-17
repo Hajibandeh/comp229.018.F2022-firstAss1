@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node ./server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
-    },
+  },
   "name": "comp229.018.f2022",
   "description": "COMP229 Code Examples",
   "version": "1.0.0",
@@ -15,14 +15,16 @@
   "bugs": {
     "url": "https://github.com/Hajibandeh/comp229.018.F2022-firstAss1/issues"
   },
-  "homepage": "https://github.com/Hajibandeh/comp229.018.F2022-firstAss1#readme"
-,
-"dependencies": {
-   "@fortawesome/fontawesome-free": "^6.2.0",
-   "bootstrap": "^5.1.1", 
-   "cookie-parser": "~1.4.4",
-  "debug": "~2.6.9", "ejs": "~2.6.1",
-   "express": "~4.16.1",
+  "homepage": "https://github.com/Hajibandeh/comp229.018.F2022-firstAss1#readme",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.2.0",
+    "bootstrap": "^5.1.1",
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "ejs": "~2.6.1",
+    "express": "~4.16.1",
     "http-errors": "~1.6.3",
-     "morgan": "~1.9.1" }
+    "mongoose": "^6.6.5",
+    "morgan": "~1.9.1"
+  }
 }

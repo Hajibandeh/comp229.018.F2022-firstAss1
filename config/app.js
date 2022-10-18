@@ -1,15 +1,27 @@
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+//let compress = require('compression');
+let bodyParser = require('body-parser');
+//let methodOverride = require('method-override');
+let session = require('express-session');
+let flash = require('connect-flash');
+let passport = require('passport');
 
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+let app = express();
 
-var indexRouter = require('../routes/index');
-var businessContactsRouter = require('../routes/businessContacts.router');
-var usersRouter = require('../routes/users.router');
+app.use(session({
+  saveUninitialized: true,
+  resave: true,
+  secret: "sessionSecret"
+}));
 
-var app = express();
+
+let indexRouter = require('../routes/index');
+let usersRouter = require('../routes/users');
+let bussinessContactsRouter = require('../routes/businessContacts');
 
 // view engine setup
 app.set('views', path.join(__dirname, '../views'));
@@ -22,13 +34,16 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../public')));
 app.use(express.static(path.join(__dirname, '../node_modules')));
 
+// Sets up passport
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+
 app.use('/', indexRouter);
-app.use('/Projects', indexRouter);
-app.use('/Services', indexRouter);
-app.use('/Contactme', indexRouter);
-app.use('/Aboutme', indexRouter);
-app.use('/businessContacts', businessContactsRouter);
-app.use('/login', usersRouter);
+app.use('/users', usersRouter);
+app.use('/bussinessContacts', bussinessContactsRouter);
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -88,7 +88,7 @@
                         <i class="fas fa-user"></i> Services </a>
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <!-- <li class="nav-item">
                     <% if (title == "login") { %>
                         <a class="nav-link active" href="/login">
                     <% } else { %>
@@ -96,7 +96,7 @@
                     <% } %>            
                         <i class="fas fa-user"></i> login </a>
                     </a>
-                  </li>
+                  </li> -->
                   <!-- <li class="nav-item dropdown">
                     <% if (title == "user List" || title == "Add a new Item") { %>
                       <a class="nav-link active dropdown-toggle" href="#" role="button" date-bs-toggle="dropdown">Inventory</a>
@@ -136,14 +136,36 @@
                         
                     </a>
                   </li>
+                  <% if (title == " businessContacts List" || title == "Add a new Item") { %>
+                    <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+                  <% } else { %>
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Inventory</a>
+                  <% } %>       
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="/businessContacts/list">business Contacts List</a></li>
+                    <li><a class="dropdown-item" href="/businessContacts/add">Add a new Item</a></li>
+                  </ul>
+                </li>
                   
+                  <li class="nav-item">
+                    <% if (title == "Users") { %>
+                        <a class="nav-link active" href="/users">
+                    <% } else { %>
+                        <a class="nav-link" href="/users">
+                    <% } %>            
+                        <i class="fas fa-user"></i> Users </a>
+                    </a>            
+                  <li class="nav-item">  
+                    <% if (typeof userName == 'string' && userName) { %>
+                      <a class="nav-link" href="/users/signout" onclick="return confirm('Are you sure?')">Sign Out (<%= userName %>)</a>
+                    <% } else { %>
+                      <a class="nav-link" href="/users/signin">Signin</a>
+                    <% } %>            
+                  </li> 
                 </ul>
-
-
-                <form  class="d-flex" role="login">
                 
-                  <a role="button" href="../users/"  class="btn btn-outline-success" type="submit">login</a>
-                </form>
+
+                
               </div>
             </div>
           </nav>

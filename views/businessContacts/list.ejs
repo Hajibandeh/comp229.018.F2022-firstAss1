@@ -1,0 +1,52 @@
+<!-- Name :Behnaz Hajibandeh
+Student ID:301291057 -->
+<%- include ../partials/header.ejs %>
+
+   
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="row">
+        <h1><%= title %></h1>
+        <br/>
+        <div>
+            <a href="/businessContacts/add" class="btn btn-primary align-self-end" role="button" >
+                <i class="fas fa-plus-circle"></i> 
+                Add a new businessContacts
+            </a>                
+        </div>
+        <br/>
+        <div class="table-responsive">
+            <table class="table table-bordered table-striped table-hover">
+                <!-- Header Row-->
+                <tr>
+                    <th class="text-center">First Name</th>
+                    <th class="text-center">Last Name</th>
+                    <th class="text-center">Contact</th>
+                    <th class="text-center">Email</th>
+                   <th class="text-center" colspan="2">Actions</th>
+                </tr>
+
+                <!-- Repeatable Template Row -->
+
+                <% for(let count = 0; count <ListContact.length; count++) { %>
+                    <tr>
+                        <td class="text-center"><%= ListContact[count].firstname %></td>
+                        <td class="text-center"><%= ListContact[count].lastname %></td>
+                        <td class="text-center"><%= ListContact[count].contact %></td>
+                        <td class="text-center"><%= ListContact[count].email %></td>
+                        <td class="text-center">
+                            <a href="/businessContacts/edit/<%= ListContact[count]._id %>" class="btn btn-primary btn-sm">
+                            <i class="fas fa-pencil-alt">Edit Item</i></a>
+                        </td>
+                        <td class="text-center">
+                            <a href="/businessContacts/delete/<%= ListContact[count]._id %>" class="btn btn-danger btn-sm">
+                            <i class="fas fa-trash-alt">Delete</i></a>
+                        </td>
+                    </tr>
+                <% } %>
+            </table>
+        </div>
+    </div>
+  </main>
+<%- include ../partials/footer.ejs %>

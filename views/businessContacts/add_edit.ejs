@@ -1,0 +1,76 @@
+<!-- Name :Behnaz Hajibandeh
+Student ID:301291057 -->
+<%- include ../partials/header.ejs %>
+
+<!-- Content for the Add_Edit page -->
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1><%= title %></h1>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <input type="hidden"
+                        name="id"
+                        value="<%= item._id %>"
+                    >
+                    <label for="firstNameTextField">First Name</label>
+                    <input type="text" class="form-control"
+                        id="itemTextField"
+                        placeholder="Enter the First Name"
+                        name="firstname" 
+                        value="<%= item.firstname %>"
+                        required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="lastNameTextField">Last Name</label>
+                    <input type="text" class="form-control"
+                    id="lastNameTextField"
+                    placeholder="Enter the First Name"
+                    name="lastname" 
+                    value="<%= item.lastname %>"
+                    required>
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="contactTextField">Contact</label>
+                    <input type="number" class="form-control"
+                    id="contactTextField"
+                    placeholder="Enter a contact address"
+                    name="contact" 
+                    value="<%= item.contact %>"
+                    >
+                </div>
+                <br />
+                <div class="form-group">
+                    <label for="emailTextField">Email Address</label>
+                    <input type="text" class="form-control"
+                    id="emailTextField"
+                    placeholder="Enter a email address"
+                    name="email" 
+                    value="<%= item.email %>">
+                </div>
+                <br />
+                
+               
+                
+                <br/>
+
+                <button class="btn btn-primary" type="submit">
+                    <i class="fas fa-edit"></i> 
+                    Submit
+                </button>
+                
+                <a href="/businessContacts/list" class="btn btn-warning">
+                    <i class="fas fa-undo"></i> 
+                    Cancel
+                </a>
+
+            </form>
+        </div>
+
+    </div>
+</div>
+
+<%- include ../partials/footer.ejs %>
